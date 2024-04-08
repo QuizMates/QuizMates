@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        /* CSS untuk tombol musik */
+        #toggle-music-button {
+            position: absolute;
+            top: 2%; /* Jarak dari atas */
+            left: 38%; /* Letak di tengah */
+            transform: translateX(-50%);
+            z-index: 100; /* Pastikan tombol muncul di atas konten lain */
+            background-color: #f1ee04; /* Warna latar belakang */
+            color: rgb(8, 0, 0); /* Warna teks */
+            padding: 5px 10px; /* Padding */
+            border: 2px solid black; /* Border hitam dengan ketebalan 2px */
+            border-radius: 5px; /* Border radius */
+            cursor: pointer; /* Kursor berubah saat diarahkan */
+            font-weight: bold; /* Membuat teks tebal */
+            font-family: 'Comfortaa', sans-serif;
+        }
+  
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>trial QuizMates</title>
+    <link rel="stylesheet" href="css.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Senza:wght@700&display=swap">
+</head>
+</div>
+    </div>
+    <div class="quiz-container">
+        <div class="progress-bar-container">
+            <div class="progress-bar-value" id="progress-bar-value"></div>
+        </div>
+        <div class="start-page" id="start-page">
+            <!--h1>What cosmic ingredient do you taste like?</h1-->
+            <h1>QuizMates</h1>
+            <p>uji coba quizmates</p>
+            <p>tidak untuk didokumentasi dan sebar luaskan</p>
+            <img src="logoawal.png" alt="Logo" class="logo">
+            <audio id="background-music" autoplay loop>
+                <source src="Ever-8-bit.mp3" type="audio/mpeg">
+            </audio>
+            <button id="toggle-music-button" onclick="toggleMusic()">with music</button>
+            <!-- Add an input field for the user's name -->
+            <!--input type="text" id="user-name" placeholder="Your Name"-->
+            <button id="start-button" class="start-button">Play</button>
+            <a href="Info/" target="_blank" rel="noopener noreferrer"><button class="start-button">Learn</button></a>
+            <!--a href="gal.html" target="_blank" rel="noopener noreferrer"><button class="start-button">Learn</button></a-->  
+            <br>
+            <p1> cari tau minat mu.</p1>
+            <p1>Made by Acho yasmin</p1>
+        </div>
+
+        <div class="quiz-page" id="quiz-page" style="display: none;">
+            <div id="quiz">
+                <!-- Questions with images, and choice buttons will be generated here dynamically using JavaScript -->
+            </div>
+            <div id="result" style="display: none;">
+                <p>wajib di share di story ya #quizmates</p>
+                <div class="result-image">
+                    <img id="result-image" src="" alt="Result Image">
+                </div>
+                <!--p>Feedback & Enter Raffle!<a href="https://forms.gle/1SYvtZrZYcD9VtSf6" target="_blank">here</a></p-->
+                <br>
+                <p>Made by <a href="htt ig" target="_blank">@puestacho</a></p>
+                <p>Special thanks to yasmin <a href="https://ig" target="_blank">@yamsin</a></p>
+                <p>uji coba ini dilarang di sebar luaskan <a href="https://ig" target="_blank">uji coba quizmates</a></p>
+                <div class="hover-container">
+                    <span class="hover-text">kritik dan saran <a href="https://forms.gle/...." target="_blank">here</a></span>
+                    <!--span class="tooltip">help me improve this and win prizes!</span-->
+                </div>
+                <br>
+                <a href="index.html" target="_blank" rel="noopener noreferrer"><button class="do-not-press-button">Time Machine</button></a>  
+                <a href="Info/" target="_blank" rel="noopener noreferrer"><button class="do-not-press-button">Explore More!</button></a> 
+                <a href="sub.html" target="_blank" rel="noopener noreferrer"><button class="do-not-press-button">Big Red Button</button></a> 
+                <div class="result-content">
+                    <div class="result-text">
+                        <!-- Result text and keywords will go here -->
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Scores container to display scores for each letter -->
+            <!--div class="scores-container">
+                <p>E Score: 0, S Score: 0, T Score: 0, P Score: 0 </p>
+                <p>I Score: 0, N Score: 0, F Score: 0, J Score: 0</p>
+            </div-->
+            
+            <!--button id="restart-button" class="restart-button" style="display: none;">Restart</button-->
+        <footer>
+         <p>&copy; 2024 HIMPRODIA UI</p>
+        <p>Department Pengembangan dan Karir</p>
+        </footer>
+        </div>
+    </div>
+    <script src="java.js"></script>
+    <script>
+       var music = document.getElementById("background-music");
+        var toggleButton = document.getElementById("toggle-music-button");
+
+        function toggleMusic() {
+            if (music.paused) {
+                music.play();
+                toggleButton.textContent = "Pause Music";
+            } else {
+                music.pause();
+                toggleButton.textContent = "Play Music";
+            }
+        }
+    </script>
+    
+</body>
+</html>
